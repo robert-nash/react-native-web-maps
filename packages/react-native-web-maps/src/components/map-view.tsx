@@ -1,6 +1,6 @@
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import type { ForwardedRef } from 'react';
 import React, {
-  ForwardedRef,
   forwardRef,
   memo,
   useCallback,
@@ -235,7 +235,6 @@ function _MapView(props: MapViewProps, ref: ForwardedRef<Partial<RNMapView>>) {
               subAdministrativeArea: address.subregion || '',
               subLocality: address.city || '',
               thoroughfare: '',
-              subThoroughfare: '',
             }
           : (null as unknown as Address);
       },
